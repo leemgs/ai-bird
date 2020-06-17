@@ -31,7 +31,7 @@ SOFTWARE.
 void ButtonFuncs::about(Game *game_instance)
 {
     QWidget *gameQObject = dynamic_cast<QWidget *>(game_instance);
-    QMessageBox::about(gameQObject, "About...", QString("Flappy Bird Qt by fuzun\nVersion: v%1\n\ngithub.com/fuzun/Flappy-Bird-Qt").arg(QCoreApplication::applicationVersion()));
+    QMessageBox::about(gameQObject, "About...", QString("AI Bird with QT\nVersion: v%1\n\ngithub.com/leemgs").arg(QCoreApplication::applicationVersion()));
 }
 
 void ButtonFuncs::play(Game *game_instance)

@@ -30,7 +30,7 @@ int main(int argc, char **argv)
     QApplication app(argc, argv);
 
     Q_INIT_RESOURCE(Resource);
-    QCoreApplication::setOrganizationName("fuzun");
+    QCoreApplication::setOrganizationName("Geunsik Lim");
     QCoreApplication::setApplicationName(GAME_NAME);
     QCoreApplication::setApplicationVersion(GAME_VERSION);
 

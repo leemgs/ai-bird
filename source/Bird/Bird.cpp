@@ -137,7 +137,8 @@ void Bird::gravitation()
     yAnimator->setEndValue(endPos);
 
 
-    if (abs(curPosY - endPos) < 0.01)
+    //if (abs(curPosY - endPos) < 0.01)
+    if (labs(curPosY - endPos) < 0.01)
     {
         birdDesigner->stop();
         yAnimator->stop();
@@ -167,7 +168,8 @@ void Bird::rotate(const qreal &end, const int& duration, const QEasingCurve& cur
 
 void Bird::setRotation(qreal angle)
 {
-       if (abs(currentRotation - angle) > 0.01)
+       //if (abs(currentRotation - angle) > 0.01)
+       if (labs(currentRotation - angle) > 0.01)
        {
            currentRotation = angle;
            QPointF c = boundingRect().center();
@@ -181,7 +183,7 @@ void Bird::setRotation(qreal angle)
 
 void Bird::startOscillate()
 {
-    birdDesigner->start(85);
+    birdDesigner->start(45); //origianl 85
     oscillator->start();
 }
 
@@ -196,13 +198,13 @@ void Bird::rise()
     yAnimator->stop();
     yAnimator->setStartValue(curPosY);
     yAnimator->setEasingCurve(QEasingCurve::OutQuad);
-    yAnimator->setEndValue(curPosY - (screenHeight / 10));
+    yAnimator->setEndValue(curPosY - (screenHeight / 45)); // origianl 10  (Geunsik Lim)
 
     yAnimator->setDuration(285);
 
     yAnimator->start();
 
-    birdDesigner->setInterval(35);
+    birdDesigner->setInterval(55); //origianl 35
 
     rotate(-20, 95, QEasingCurve::OutQuad);
 }

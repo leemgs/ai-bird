@@ -65,7 +65,7 @@ AI::AI(class Game *parent_game, int aiNeuronCount, int aiBatchSize, int aiEpochs
     predictionBar->setPen(linePen3);
 
     aiInfo = new QGraphicsTextItem();
-    aiInfo->setPlainText(QString("***AI***\n\nNeuron count: %1\nBatch size: %2\nEpochs: %3\nUpdate interval: %4\n").arg(QString::number(neuronCount), QString::number(batchSize), QString::number(epochs), QString::number(updateInterval)));
+    aiInfo->setPlainText(QString("***Quest07: AI***\n\nNeuron count: %1\nBatch size: %2\nEpochs: %3\nUpdate interval: %4\n").arg(QString::number(neuronCount), QString::number(batchSize), QString::number(epochs), QString::number(updateInterval)));
     aiInfo->setPos(0, game->scene->ground->y() + 35);
 
     game->scene->addItem(aiInfo);
